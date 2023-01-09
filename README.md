@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Maps App 3000
 
-## Available Scripts
+This is a React app that allows users to search for places and view information about them. It was created with create-react-app and uses the Google Maps API to display maps and retrieve data about places.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+Pretty basic, actually.
+- Search for places all around the world
+- Set a marker on the map to indicate the selected place
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  git clone https://github.com/kenniga/beyondsoft-test
+```
 
-### `npm run eject`
+Go to the project directory
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  cd beyondsoft-test
+```
+For development purposes, you can create this environment variable by running:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cp .env.example .env
+```
+Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm:
+```bash
+  npm install
+```
+yarn:
+```bash
+  yarn install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the server
 
-## Learn More
+npm:
+```bash
+  npm run start
+```
+yarn:
+```bash
+  yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tech Stack
 
-### Code Splitting
+**Core:** [React v17 (CRA)](https://create-react-app.dev/), [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**State Management:** [Redux](https://redux.js.org/), [Redux-Observable](https://redux-observable.js.org/)
 
-### Analyzing the Bundle Size
+**Styling Framework and methods:** [Material-UI](https://mui.com/material-ui/getting-started/overview/), CSS Module, [Sass](https://sass-lang.com/), [Emotion](https://emotion.sh/docs/introduction)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Other Libraries/Packages:** [@googlemaps/react-wrapper](https://github.com/googlemaps/react-wrapper), [craco](https://craco.js.org/)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Kenni G. Alamsyah](https://www.github.com/kenniga)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
