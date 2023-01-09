@@ -3,8 +3,7 @@
 
 This is a React app that allows users to search for places and view information about them. It was created with create-react-app and uses the Google Maps API to display maps and retrieve data about places.
 
-
-
+![Jan-09-2023 20-02-35](https://user-images.githubusercontent.com/16045365/211314273-5b29bcad-5a23-4a7d-843e-ef2efc1aab25.gif)
 
 ## Features
 
