@@ -1,0 +1,7 @@
+export const SEARCH = 'SEARCH';
+export const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
+export const SEARCH_ERROR = 'SEARCH_ERROR';
+
+export const SELECT_PLACE = 'SELECT_PLACE';
+export const SELECT_PLACE_SUCCESS = 'SELECT_PLACE_SUCCESS';
+export const SELECT_PLACE_ERROR = 'SELECT_PLACE_ERROR';

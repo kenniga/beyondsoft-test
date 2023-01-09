@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Wrapper } from "@googlemaps/react-wrapper";
+import { connect } from "react-redux";
+import CircularProgress from '@mui/joy/CircularProgress';
+import GoogleMap, { Marker } from '@components/GoogleMap'
+import SearchForm from "@components/SearchForm";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App({ selectedPlace }) {
+    const render = (status) => {
+        return <CircularProgress />;
+    };
+    const defaultCenterCoordinate = { lat: 3.1348303682222918, lng: 101.7130285638099 }
+
+    return (
+        <div style={{ position: 'relative' }}>
+            <Wrapper apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} render={render} libraries={["places"]}>
+                <SearchForm />
+                <GoogleMap center={selectedPlace?.geometry?.location || defaultCenterCoordinate}>
+                    <Marker position={selectedPlace?.geometry?.location} />
+                </GoogleMap>
+            </Wrapper>
+        </div>
+    )
 }
 
-export default App;
+const mapStateToProps = state => ({
+    selectedPlace: state.selectedPlace.currentSelectedPlace
+});
+export default connect(mapStateToProps, null)(App)

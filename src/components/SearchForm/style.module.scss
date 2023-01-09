@@ -1,0 +1,14 @@
+.input {
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 100px;
+    z-index: 1;
+    margin: 0 20px;
+
+    @media screen and (min-width: 768px) {
+        width: 50vw;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
